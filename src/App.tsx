@@ -2,11 +2,12 @@ import { useEffect, useRef, useLayoutEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { 
-  Star, Heart, Zap, Calendar, 
+  Star, Heart, Zap, 
   MapPin, Phone, Mail, Menu, X,
   Sparkles, Shield, Users, TrendingUp
 } from 'lucide-react';
 import './App.css';
+import { WhatsAppChat } from './components/WhatsAppChat';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,9 +46,9 @@ function Navigation() {
             <button onClick={() => scrollToSection('dance')} className="nav-link">Schedule</button>
             <button onClick={() => scrollToSection('values')} className="nav-link">Pricing</button>
             <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
-            <button onClick={() => scrollToSection('contact')} className="btn-primary text-sm py-3 px-6">
+            <a href="https://wa.me/2347071460966?text=Hi!%20I'm%20interested%20in%20enrolling%20my%20child%20in%20House%20of%20Awesome%20programs." target="_blank" rel="noopener noreferrer" className="btn-primary text-sm py-3 px-6">
               Enroll
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -64,7 +65,7 @@ function Navigation() {
           <button onClick={() => scrollToSection('dance')} className="font-display text-3xl text-ink hover:text-poppy transition-colors">Schedule</button>
           <button onClick={() => scrollToSection('values')} className="font-display text-3xl text-ink hover:text-poppy transition-colors">Pricing</button>
           <button onClick={() => scrollToSection('contact')} className="font-display text-3xl text-ink hover:text-poppy transition-colors">Contact</button>
-          <button onClick={() => scrollToSection('contact')} className="btn-primary mt-4">Enroll Now</button>
+          <a href="https://wa.me/2347071460966?text=Hi!%20I'm%20interested%20in%20enrolling%20my%20child%20in%20House%20of%20Awesome%20programs." target="_blank" rel="noopener noreferrer" className="btn-primary mt-4">Enroll Now</a>
         </div>
       )}
     </>
@@ -229,9 +230,9 @@ function HeroSection() {
         className="absolute flex flex-col sm:flex-row gap-4"
         style={{ left: '50%', top: '78vh', transform: 'translateX(-50%)' }}
       >
-        <button onClick={() => scrollToSection('contact')} className="btn-primary">
+        <a href="https://wa.me/2347071460966?text=Hi!%20I'm%20interested%20in%20enrolling%20my%20child%20in%20House%20of%20Awesome%20programs." target="_blank" rel="noopener noreferrer" className="btn-primary">
           Enroll Now
-        </button>
+        </a>
         <button onClick={() => scrollToSection('programs')} className="btn-secondary">
           View Programs
         </button>
@@ -930,15 +931,46 @@ function ContactSection() {
             <div className="mt-12 space-y-4">
               <div className="flex items-center gap-4 text-white/70">
                 <Mail size={20} className="text-poppy" />
-                <span className="font-body">hello@houseofawesome.ng</span>
+                <a href="mailto:houseofawesomee@gmail.com" className="font-body hover:text-poppy transition-colors">
+                  houseofawesomee@gmail.com
+                </a>
               </div>
               <div className="flex items-center gap-4 text-white/70">
                 <Phone size={20} className="text-poppy" />
-                <span className="font-body">+234 801 234 5678</span>
+                <a href="tel:+2347071460966" className="font-body hover:text-poppy transition-colors">
+                  +234 707 146 0966
+                </a>
               </div>
               <div className="flex items-center gap-4 text-white/70">
                 <MapPin size={20} className="text-poppy" />
                 <span className="font-body">12 Fun Street, Lekki, Lagos, Nigeria</span>
+              </div>
+            </div>
+
+            {/* Social Media */}
+            <div className="mt-8 pt-8 border-t border-white/10">
+              <p className="font-body text-sm text-white/50 mb-4">Follow us</p>
+              <div className="flex gap-3">
+                <a href="https://instagram.com/houseofawesomee" target="_blank" rel="noopener noreferrer" className="icon-sticker w-10 h-10 hover:bg-poppy transition-colors" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </a>
+                <a href="https://facebook.com/Contemporary%20Dance%20Classes" target="_blank" rel="noopener noreferrer" className="icon-sticker w-10 h-10 hover:bg-poppy transition-colors" aria-label="Facebook">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </a>
+                <a href="https://tiktok.com/@houseofawesomee" target="_blank" rel="noopener noreferrer" className="icon-sticker w-10 h-10 hover:bg-poppy transition-colors" aria-label="TikTok">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                  </svg>
+                </a>
+                <a href="https://threads.net/@houseofawesmee" target="_blank" rel="noopener noreferrer" className="icon-sticker w-10 h-10 hover:bg-poppy transition-colors" aria-label="Threads">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                    <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.439 2.525-8.49C5.848 1.233 8.606.028 12.186.004h.017c3.58.024 6.334 1.205 8.184 3.509 1.645 2.05 2.495 4.904 2.523 8.48v.017c-.03 3.579-.879 6.439-2.525 8.49-1.646 2.27-4.404 3.475-7.984 3.5h-.215zm.182-21.727c-2.961.026-5.195.913-6.64 2.635-1.336 1.59-2.019 3.88-2.03 6.805v.018c.01 2.925.694 5.215 2.03 6.805 1.445 1.722 3.679 2.61 6.64 2.635 2.961-.026 5.195-.913 6.64-2.635 1.336-1.59 2.019-3.88 2.03-6.805v-.018c-.01-2.925-.694-5.215-2.03-6.805-1.445-1.722-3.679-2.61-6.64-2.635zm-.027 9.734c-.318.001-.57.26-.57.578v3.495c0 .318.252.577.57.577.318 0 .576-.26.576-.577v-3.495c0-.318-.258-.578-.576-.578zm0-4.122c-2.303 0-4.17 1.867-4.17 4.17s1.867 4.17 4.17 4.17c2.302 0 4.17-1.867 4.17-4.17s-1.868-4.17-4.17-4.17zm0 6.762c-1.429 0-2.592-1.163-2.592-2.592 0-1.428 1.163-2.591 2.592-2.591 1.428 0 2.591 1.163 2.591 2.591 0 1.429-1.163 2.592-2.591 2.592z"/>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -979,14 +1011,25 @@ function Footer() {
           </div>
 
           <div className="flex gap-4">
-            <a href="#" className="icon-sticker w-12 h-12 hover:bg-poppy transition-colors">
-              <Calendar size={20} />
+            <a href="https://instagram.com/houseofawesomee" target="_blank" rel="noopener noreferrer" className="icon-sticker w-12 h-12 hover:bg-poppy transition-colors" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
             </a>
-            <a href="#" className="icon-sticker w-12 h-12 hover:bg-poppy transition-colors">
-              <Mail size={20} />
+            <a href="https://facebook.com/Contemporary%20Dance%20Classes" target="_blank" rel="noopener noreferrer" className="icon-sticker w-12 h-12 hover:bg-poppy transition-colors" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
             </a>
-            <a href="#" className="icon-sticker w-12 h-12 hover:bg-poppy transition-colors">
-              <Phone size={20} />
+            <a href="https://tiktok.com/@houseofawesomee" target="_blank" rel="noopener noreferrer" className="icon-sticker w-12 h-12 hover:bg-poppy transition-colors" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+              </svg>
+            </a>
+            <a href="https://threads.net/@houseofawesmee" target="_blank" rel="noopener noreferrer" className="icon-sticker w-12 h-12 hover:bg-poppy transition-colors" aria-label="Threads">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.439 2.525-8.49C5.848 1.233 8.606.028 12.186.004h.017c3.58.024 6.334 1.205 8.184 3.509 1.645 2.05 2.495 4.904 2.523 8.48v.017c-.03 3.579-.879 6.439-2.525 8.49-1.646 2.27-4.404 3.475-7.984 3.5h-.215zm.182-21.727c-2.961.026-5.195.913-6.64 2.635-1.336 1.59-2.019 3.88-2.03 6.805v.018c.01 2.925.694 5.215 2.03 6.805 1.445 1.722 3.679 2.61 6.64 2.635 2.961-.026 5.195-.913 6.64-2.635 1.336-1.59 2.019-3.88 2.03-6.805v-.018c-.01-2.925-.694-5.215-2.03-6.805-1.445-1.722-3.679-2.61-6.64-2.635zm-.027 9.734c-.318.001-.57.26-.57.578v3.495c0 .318.252.577.57.577.318 0 .576-.26.576-.577v-3.495c0-.318-.258-.578-.576-.578zm0-4.122c-2.303 0-4.17 1.867-4.17 4.17s1.867 4.17 4.17 4.17c2.302 0 4.17-1.867 4.17-4.17s-1.868-4.17-4.17-4.17zm0 6.762c-1.429 0-2.592-1.163-2.592-2.592 0-1.428 1.163-2.591 2.592-2.591 1.428 0 2.591 1.163 2.591 2.591 0 1.429-1.163 2.592-2.591 2.592z"/>
+              </svg>
             </a>
           </div>
         </div>
@@ -1102,6 +1145,12 @@ function App() {
       
       {/* Footer */}
       <Footer />
+
+      {/* WhatsApp Chat Widget */}
+      <WhatsAppChat
+        phoneNumber="+2347071460966"
+        message="Hi! I'm interested in learning more about House of Awesome programs."
+      />
     </div>
   );
 }
