@@ -851,10 +851,42 @@ function ContactSection() {
     return () => ctx.revert();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      const response = await fetch('https://formspree.io/f/xyklzenp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          childAge: formData.childAge,
+          message: formData.message,
+          _subject: `New inquiry from ${formData.name} - House of Awesome`,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', phone: '', childAge: '', message: '' });
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        setSubmitError('Something went wrong. Please try again or contact us via WhatsApp.');
+      }
+    } catch (error) {
+      setSubmitError('Something went wrong. Please try again or contact us via WhatsApp.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -878,6 +910,11 @@ function ContactSection() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
+                {submitError && (
+                  <div className="bg-red-500/20 border border-red-500/50 rounded-lg p-4 text-red-200 text-sm">
+                    {submitError}
+                  </div>
+                )}
                 <div className="grid md:grid-cols-2 gap-4">
                   <input
                     type="text"
@@ -921,8 +958,12 @@ function ContactSection() {
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
                   rows={4}
                 />
-                <button type="submit" className="btn-primary w-full md:w-auto">
-                  Send Message
+                <button
+                  type="submit"
+                  className="btn-primary w-full md:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             )}
