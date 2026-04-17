@@ -50,8 +50,8 @@ module.exports = {
         },
         // Custom brand colors
         yellow: {
-          DEFAULT: '#F7B733',
-          light: '#F9C85A',
+          DEFAULT: '#FFD60A',
+          light: '#FFE24D',
           dark: '#E5A520',
         },
         ink: {
@@ -59,8 +59,8 @@ module.exports = {
           light: '#2F2F2F',
         },
         poppy: {
-          DEFAULT: '#E84A25',
-          dark: '#D13D1A',
+          DEFAULT: '#111111',
+          dark: '#000000',
         },
       },
       fontFamily: {
