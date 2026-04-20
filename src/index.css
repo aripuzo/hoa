@@ -146,6 +146,17 @@
   .nav-link {
     @apply font-ui font-semibold text-ink hover:text-poppy transition-colors duration-200;
   }
+
+  /* Pricing card - extra padding for blob shapes */
+  .pricing-card {
+    @apply relative;
+    padding: 2.5rem;
+  }
+
+  .pricing-card .sticker-yellow,
+  .pricing-card .sticker-white {
+    @apply p-10;
+  }
 }
 
 @layer utilities {
