@@ -647,13 +647,6 @@ function ActivitySpotlight({
     return () => ctx.revert();
   }, [imagePosition]);
 
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section
       ref={sectionRef}
