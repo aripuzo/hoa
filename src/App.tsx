@@ -1203,7 +1203,7 @@ function PricingSection() {
               TIMETABLE:
             </p>
             <p className="font-body text-sm text-white/60 max-w-2xl">
-              Gymnastics: am - 10am
+              Gymnastics: 8am - 10am
             </p>
             <p className="font-body text-sm text-white/60 max-w-2xl">
               Dance: 10am - 12pm  
