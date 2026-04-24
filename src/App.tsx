@@ -1208,8 +1208,7 @@ function PricingSection() {
             Simple, honest pricing.
           </h2>
           <p className="font-body text-lg text-white/60 max-w-2xl">
-            Weekend classes every Saturday. Skateboarding holds the 1st and 3rd
-            Saturday of each month.
+            Weekend classes every Saturday
           </p>
         </div>
 
@@ -1791,7 +1790,7 @@ function App() {
           id="gymnastics"
           title="Flip, balance, fly."
           label="Gymnastics"
-          description="Safe skill progressions, body control and gradual development — children are encouraged to challenge themselves, have fun and build a strong physical foundation."
+          description="Safe skill progressions, body control and gradual development. Children are encouraged to challenge themselves, have fun and build a strong physical foundation."
           image="/spotlight_gymnastics.jpeg"
           imagePosition="left"
           zIndex={40}
@@ -1800,7 +1799,7 @@ function App() {
           id="skateboarding"
           title="Board with confidence."
           label="Skateboarding"
-          description="Fun and engaging classes that build balance, coordination and confidence. We focus on safety, basic skills and gradual progression — helping kids overcome fear and express themselves."
+          description="Fun and engaging classes that build balance, coordination and confidence. We focus on safety, basic skills and gradual progression, helping kids overcome fear and express themselves."
           image="/spotlight_skating.jpeg"
           imagePosition="right"
           zIndex={50}
@@ -1809,7 +1808,7 @@ function App() {
           id="taekwondo"
           title="Discipline meets fun."
           label="Taekwondo"
-          description="Beyond kicks and punches — structured training builds self-defence, mental agility, resilience and positive character both on and off the mat."
+          description="Beyond kicks and punches, structured training builds self-defence, mental agility, resilience and positive character both on and off the mat."
           image="/spotlight_taekwondo.jpeg"
           imagePosition="left"
           zIndex={60}
