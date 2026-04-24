@@ -1117,15 +1117,15 @@ function ValuesSection() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="values-quote sticker sticker-black blob-3 p-8 w-full lg:w-1/2">
-            <p className="font-body text-white/50 text-sm uppercase tracking-widest mb-4">
+          <div className="values-quote sticker sticker-black blob-3 p-6 md:p-8 w-full lg:w-1/2">
+            <p className="font-body text-white/50 text-xs md:text-sm uppercase tracking-widest mb-4">
               Our Promise
             </p>
-            <p className="font-display text-2xl md:text-3xl text-white leading-snug">
+            <p className="font-display text-xl md:text-3xl text-white leading-snug">
               "We see your child. We honor their journey. We commit to their
               growth."
             </p>
-            <p className="font-body text-white/60 mt-4 text-sm">
+            <p className="font-body text-white/60 mt-4 text-xs md:text-sm">
               At House of Awesome, we are not just shaping skills we are
               shaping futures.
             </p>
@@ -1208,8 +1208,22 @@ function PricingSection() {
             Simple, honest pricing.
           </h2>
           <p className="font-body text-lg text-white/60 max-w-2xl">
-            Weekend classes every Saturday
-          </p>
+            Weekend classes every Saturday.</p>
+            <p className="font-body text-sm text-white/60 max-w-2xl">
+              TIMETABLE:
+            </p>
+            <p className="font-body text-sm text-white/60 max-w-2xl">
+              Gymnastics: 8AM - 10am
+            </p>
+            <p className="font-body text-sm text-white/60 max-w-2xl">
+              Dance: 10AM - 12pm  
+            </p>
+            <p className="font-body text-sm text-white/60 max-w-2xl">
+              Skateboarding: 11am - 12pm
+            </p>
+            <p className="font-body text-sm text-white/60 max-w-2xl">
+              Taekwondo: 12.30pm - 2pm
+            </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-10 mb-12">
@@ -1273,7 +1287,7 @@ function PricingSection() {
               ))}
             </div>
             <p className="font-body text-sm text-ink/70 mt-6 font-medium">
-              We also offer Private Tutoring and Special Programs. Reach out
+              We also offer Private Tutoring, Teach in Schools, Host Parties and Special Programs. Reach out
               for details.
             </p>
           </div>
