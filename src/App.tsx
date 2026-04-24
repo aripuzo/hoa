@@ -455,17 +455,17 @@ function ProgramsSection() {
       {/* Title Sticker */}
       <div
         ref={titleRef}
-        className="absolute sticker sticker-black blob-2 px-8 py-6"
-        style={{ left: "50%", top: "10vh", transform: "translateX(-50%)" }}
+        className="absolute sticker sticker-black blob-2 px-6 md:px-8 py-4 md:py-6 w-[85vw] md:w-auto"
+        style={{ left: "50%", top: "8vh", transform: "translateX(-50%)" }}
       >
-        <h2 className="font-display text-3xl md:text-4xl text-white text-center">
+        <h2 className="font-display text-2xl md:text-4xl text-white text-center leading-tight">
           Programs built for energy, skill & joy.
         </h2>
       </div>
 
       <p
-        className="absolute font-body text-ink/70 text-center whitespace-nowrap"
-        style={{ left: "50%", top: "22vh", transform: "translateX(-50%)" }}
+        className="absolute font-body text-ink/70 text-center w-[90vw] md:w-auto text-sm md:text-base"
+        style={{ left: "50%", top: "24vh", transform: "translateX(-50%)" }}
       >
         Ages 3–17 • Artistic Hub • Weekend classes hold every Saturday
       </p>
@@ -477,11 +477,11 @@ function ProgramsSection() {
           ref={(el) => {
             cardsRef.current[i] = el;
           }}
-          className="absolute cursor-pointer group w-[44vw] md:w-[38vw] max-w-[500px]"
+          className="absolute cursor-pointer group w-[42vw] md:w-[38vw] max-w-[500px]"
           style={{
-            left: i % 2 === 0 ? "4vw" : "auto",
-            right: i % 2 === 1 ? "4vw" : "auto",
-            top: i < 2 ? "26vh" : "58vh",
+            left: i % 2 === 0 ? "5vw" : "auto",
+            right: i % 2 === 1 ? "5vw" : "auto",
+            top: i < 2 ? "34vh" : "64vh",
             transform: `rotate(${program.rotate}deg)`,
           }}
           onClick={() => scrollToSection(program.name.toLowerCase())}
@@ -928,7 +928,7 @@ function PartySection() {
           Experiences that shape character.
         </h2>
         <p className="font-body text-white/80 mt-2 text-center text-xs md:text-base">
-          External performances, competitions & showcase days — celebrating
+          External performances, competitions & showcase days, celebrating
           effort, not just outcomes.
         </p>
       </div>
@@ -1069,7 +1069,7 @@ function ValuesSection() {
     {
       icon: Heart,
       title: "Unwavering Belief",
-      desc: "We see the potential in every child and commit — fully — to helping them reach it.",
+      desc: "We see the potential in every child and commit fully to helping them reach it.",
     },
   ];
 
@@ -1126,7 +1126,7 @@ function ValuesSection() {
               growth."
             </p>
             <p className="font-body text-white/60 mt-4 text-sm">
-              At House of Awesome, we are not just shaping skills — we are
+              At House of Awesome, we are not just shaping skills we are
               shaping futures.
             </p>
           </div>
@@ -1274,7 +1274,7 @@ function PricingSection() {
               ))}
             </div>
             <p className="font-body text-sm text-ink/70 mt-6 font-medium">
-              We also offer Private Tutoring and Special Programs — reach out
+              We also offer Private Tutoring and Special Programs. Reach out
               for details.
             </p>
           </div>
