@@ -286,12 +286,8 @@ function HeroSection() {
       {/* Left Photo Sticker */}
       <div
         ref={leftPhotoRef}
-        className="absolute photo-sticker blob-1"
+        className="absolute photo-sticker blob-1 w-[70vw] md:w-[30vw] h-[30vh] md:h-[34vh] left-[4vw] md:left-[6vw] top-[18vh]"
         style={{
-          left: "6vw",
-          top: "18vh",
-          width: "30vw",
-          height: "34vh",
           transform: "rotate(-12deg)",
         }}
       >
@@ -301,12 +297,8 @@ function HeroSection() {
       {/* Right Photo Sticker */}
       <div
         ref={rightPhotoRef}
-        className="absolute photo-sticker blob-2"
+        className="absolute photo-sticker blob-2 w-[70vw] md:w-[30vw] h-[30vh] md:h-[34vh] right-[4vw] md:right-[6vw] top-[18vh]"
         style={{
-          right: "6vw",
-          top: "18vh",
-          width: "30vw",
-          height: "34vh",
           transform: "rotate(10deg)",
         }}
       >
@@ -316,8 +308,7 @@ function HeroSection() {
       {/* Artistic Hub Sticker */}
       <div
         ref={hiStickerRef}
-        className="absolute sticker sticker-red blob-3 px-6 py-3 font-display text-xl"
-        style={{ left: "18vw", top: "14vh" }}
+        className="absolute sticker sticker-red blob-3 px-6 py-3 font-display text-lg md:text-xl left-[10vw] md:left-[18vw] top-[12vh] md:top-[14vh]"
       >
         Artistic Hub
       </div>
@@ -341,14 +332,7 @@ function HeroSection() {
       {/* Headline Sticker */}
       <div
         ref={headlineRef}
-        className="absolute sticker sticker-white blob-1 flex flex-col items-center justify-center px-8 py-10"
-        style={{
-          left: "50%",
-          top: "52%",
-          transform: "translate(-50%, -50%)",
-          width: "72vw",
-          maxWidth: "980px",
-        }}
+        className="absolute sticker sticker-white blob-1 flex flex-col items-center justify-center px-6 md:px-8 py-8 md:py-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] md:w-[72vw] max-w-[980px]"
       >
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-ink text-center leading-tight">
           House of Awesome
@@ -364,20 +348,19 @@ function HeroSection() {
       {/* CTA Row */}
       <div
         ref={ctaRef}
-        className="absolute flex flex-col sm:flex-row gap-4"
-        style={{ left: "50%", top: "78vh", transform: "translateX(-50%)" }}
+        className="absolute flex flex-col sm:flex-row gap-4 left-1/2 -translate-x-1/2 top-[82vh] md:top-[78vh]"
       >
         <a
           href="https://wa.me/2347071460966?text=Hi!%20I'm%20interested%20in%20enrolling%20my%20child%20in%20House%20of%20Awesome%20programs."
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-primary"
+          className="btn-primary whitespace-nowrap"
         >
           Enroll Now
         </a>
         <button
           onClick={() => scrollToSection("programs")}
-          className="btn-secondary"
+          className="btn-secondary whitespace-nowrap"
         >
           View Programs
         </button>
@@ -494,13 +477,11 @@ function ProgramsSection() {
           ref={(el) => {
             cardsRef.current[i] = el;
           }}
-          className="absolute cursor-pointer group"
+          className="absolute cursor-pointer group w-[44vw] md:w-[38vw] max-w-[500px]"
           style={{
-            left: i % 2 === 0 ? "8vw" : "auto",
-            right: i % 2 === 1 ? "8vw" : "auto",
-            top: i < 2 ? "28vh" : "58vh",
-            width: "38vw",
-            maxWidth: "500px",
+            left: i % 2 === 0 ? "4vw" : "auto",
+            right: i % 2 === 1 ? "4vw" : "auto",
+            top: i < 2 ? "26vh" : "58vh",
             transform: `rotate(${program.rotate}deg)`,
           }}
           onClick={() => scrollToSection(program.name.toLowerCase())}
@@ -657,12 +638,10 @@ function ActivitySpotlight({
       {/* Photo Sticker */}
       <div
         ref={photoRef}
-        className="absolute photo-sticker"
+        className={`absolute photo-sticker w-[85vw] md:w-[56vw] h-[45vh] md:h-[62vh] top-[12vh] md:top-[18vh] ${
+          imagePosition === "right" ? "right-[4vw] md:right-[6vw]" : "left-[4vw] md:left-[6vw]"
+        }`}
         style={{
-          [imagePosition]: "6vw",
-          top: "18vh",
-          width: "56vw",
-          height: "62vh",
           transform: `rotate(${imagePosition === "right" ? 8 : -8}deg)`,
         }}
       >
@@ -672,15 +651,11 @@ function ActivitySpotlight({
       {/* Headline Sticker */}
       <div
         ref={headlineRef}
-        className="absolute sticker sticker-black blob-1 px-8 py-8"
-        style={{
-          [imagePosition === "right" ? "left" : "right"]: "6vw",
-          top: "22vh",
-          width: "34vw",
-          maxWidth: "450px",
-        }}
+        className={`absolute sticker sticker-black blob-1 px-6 md:px-8 py-6 md:py-8 w-[80vw] md:w-[34vw] max-w-[450px] top-[54vh] md:top-[22vh] ${
+          imagePosition === "right" ? "left-[6vw]" : "right-[6vw]"
+        }`}
       >
-        <h2 className="font-display text-4xl md:text-5xl text-white leading-tight">
+        <h2 className="font-display text-3xl md:text-5xl text-white leading-tight">
           {title}
         </h2>
         <p className="font-body text-white/80 mt-4 text-sm md:text-base">
@@ -691,11 +666,9 @@ function ActivitySpotlight({
       {/* Label Sticker */}
       <div
         ref={labelRef}
-        className="absolute label-sticker"
-        style={{
-          [imagePosition === "right" ? "left" : "right"]: "10vw",
-          top: "52vh",
-        }}
+        className={`absolute label-sticker text-lg md:text-xl top-[50vh] md:top-[52vh] ${
+          imagePosition === "right" ? "left-[10vw]" : "right-[10vw]"
+        }`}
       >
         {label}
       </div>
@@ -937,15 +910,7 @@ function PartySection() {
       {/* Center Photo Sticker */}
       <div
         ref={photoRef}
-        className="absolute photo-sticker blob-1"
-        style={{
-          left: "50%",
-          top: "48%",
-          transform: "translate(-50%, -50%)",
-          width: "72vw",
-          maxWidth: "980px",
-          height: "50vh",
-        }}
+        className="absolute photo-sticker blob-1 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[85vw] md:w-[72vw] max-w-[980px] h-[40vh] md:h-[50vh]"
       >
         <img
           src="/party_confetti.jpeg"
@@ -957,13 +922,12 @@ function PartySection() {
       {/* Headline Sticker */}
       <div
         ref={headlineRef}
-        className="absolute sticker sticker-black blob-2 px-8 py-6"
-        style={{ left: "50%", top: "72vh", transform: "translateX(-50%)" }}
+        className="absolute sticker sticker-black blob-2 px-6 md:px-8 py-4 md:py-6 left-1/2 -translate-x-1/2 top-[72vh] md:top-[72vh] w-[90vw] md:w-auto"
       >
-        <h2 className="font-display text-3xl md:text-5xl text-white text-center">
+        <h2 className="font-display text-2xl md:text-5xl text-white text-center">
           Experiences that shape character.
         </h2>
-        <p className="font-body text-white/80 mt-2 text-center text-sm md:text-base">
+        <p className="font-body text-white/80 mt-2 text-center text-xs md:text-base">
           External performances, competitions & showcase days — celebrating
           effort, not just outcomes.
         </p>
