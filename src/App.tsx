@@ -305,14 +305,6 @@ function HeroSection() {
         <img src="/hero_gymnastics_trio.jpeg" alt="Kids doing gymnastics" />
       </div>
 
-      {/* Artistic Hub Sticker */}
-      <div
-        ref={hiStickerRef}
-        className="absolute sticker sticker-red blob-3 px-6 py-3 font-display text-lg md:text-xl left-[10vw] md:left-[18vw] top-[12vh] md:top-[14vh]"
-      >
-        Artistic Hub
-      </div>
-
       {/* Star Icon */}
       <div
         className="absolute icon-sticker w-16 h-16 animate-float"
@@ -341,7 +333,7 @@ function HeroSection() {
           Dance • Gymnastics • Skateboarding • Taekwondo
         </p>
         <p className="font-body text-sm text-ink/50 mt-2 text-center tracking-widest uppercase">
-          Nurturing strength, creativity & courage
+          Where every class feels like a party
         </p>
       </div>
 
@@ -1117,19 +1109,7 @@ function ValuesSection() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="values-quote sticker sticker-black blob-3 p-6 md:p-8 w-full lg:w-1/2">
-            <p className="font-body text-white/50 text-xs md:text-sm uppercase tracking-widest mb-4">
-              Our Promise
-            </p>
-            <p className="font-display text-xl md:text-3xl text-white leading-snug">
-              "We see your child. We honor their journey. We commit to their
-              growth."
-            </p>
-            <p className="font-body text-white/60 mt-4 text-xs md:text-sm">
-              At House of Awesome, we are not just shaping skills we are
-              shaping futures.
-            </p>
-          </div>
+
         </div>
       </div>
     </section>
@@ -1230,7 +1210,7 @@ function PricingSection() {
           {/* Weekend Class Rates */}
           <div className="pricing-card sticker sticker-yellow rounded-[2.5rem] p-8">
             <h3 className="font-display text-3xl text-ink mb-2">
-              Lekki Centre
+              Lekki 1 Centre
             </h3>
             <p className="font-body text-base text-ink/80 mb-6 font-medium">
               Payment per term (excluding skateboarding)
@@ -1640,7 +1620,7 @@ function Footer() {
               Artistic Hub
             </p>
             <p className="font-body text-white/60 mt-1">
-              Nurturing strength, creativity & courage.
+              Where every class feels like a party
             </p>
           </div>
 
