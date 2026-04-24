@@ -321,18 +321,17 @@ function HeroSection() {
         <Heart size={32} fill="white" />
       </div>
 
-      {/* Headline Sticker */}
       <div
         ref={headlineRef}
-        className="absolute sticker sticker-white blob-1 flex flex-col items-center justify-center px-6 md:px-8 py-8 md:py-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] md:w-[72vw] max-w-[980px]"
+        className="absolute sticker sticker-white blob-1 flex flex-col items-center justify-center px-8 md:px-8 py-10 md:py-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92vw] md:w-[72vw] max-w-[980px]"
       >
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-ink text-center leading-tight">
+        <h1 className="font-display text-4xl md:text-7xl lg:text-8xl text-ink text-center leading-tight">
           House of Awesome
         </h1>
-        <p className="font-body text-lg md:text-xl text-ink/80 mt-4 text-center">
+        <p className="font-body text-sm md:text-xl text-ink/80 mt-4 text-center">
           Dance • Gymnastics • Skateboarding • Taekwondo
         </p>
-        <p className="font-body text-sm text-ink/50 mt-2 text-center tracking-widest uppercase">
+        <p className="font-body text-[10px] md:text-sm text-ink/50 mt-2 text-center tracking-widest uppercase">
           Where every class feels like a party
         </p>
       </div>
@@ -447,17 +446,17 @@ function ProgramsSection() {
       {/* Title Sticker */}
       <div
         ref={titleRef}
-        className="absolute sticker sticker-black blob-2 px-6 md:px-8 py-4 md:py-6 w-[85vw] md:w-auto"
-        style={{ left: "50%", top: "8vh", transform: "translateX(-50%)" }}
+        className="absolute sticker sticker-black blob-2 px-5 md:px-8 py-3 md:py-6 w-[75vw] md:w-auto"
+        style={{ left: "50%", top: "6vh", transform: "translateX(-50%)" }}
       >
-        <h2 className="font-display text-2xl md:text-4xl text-white text-center leading-tight">
+        <h2 className="font-display text-lg md:text-4xl text-white text-center leading-tight">
           Programs built for energy, skill & joy.
         </h2>
       </div>
 
       <p
-        className="absolute font-body text-ink/70 text-center w-[90vw] md:w-auto text-sm md:text-base"
-        style={{ left: "50%", top: "24vh", transform: "translateX(-50%)" }}
+        className="absolute font-body text-ink/70 text-center w-[90vw] md:w-auto text-xs md:text-base"
+        style={{ left: "50%", top: "18vh", transform: "translateX(-50%)" }}
       >
         Ages 3–17 • Artistic Hub • Weekend classes hold every Saturday
       </p>
@@ -469,11 +468,11 @@ function ProgramsSection() {
           ref={(el) => {
             cardsRef.current[i] = el;
           }}
-          className="absolute cursor-pointer group w-[42vw] md:w-[38vw] max-w-[500px]"
+          className="absolute cursor-pointer group w-[40vw] md:w-[38vw] max-w-[500px]"
           style={{
-            left: i % 2 === 0 ? "5vw" : "auto",
-            right: i % 2 === 1 ? "5vw" : "auto",
-            top: i < 2 ? "34vh" : "64vh",
+            left: i % 2 === 0 ? "6vw" : "auto",
+            right: i % 2 === 1 ? "6vw" : "auto",
+            top: i < 2 ? "26vh" : "58vh",
             transform: `rotate(${program.rotate}deg)`,
           }}
           onClick={() => scrollToSection(program.name.toLowerCase())}
@@ -1109,7 +1108,19 @@ function ValuesSection() {
               className="w-full h-full object-cover"
             />
           </div>
-
+          <div className="values-quote sticker sticker-black blob-3 p-6 md:p-8 w-full lg:w-1/2">
+            <p className="font-body text-white/50 text-xs md:text-sm uppercase tracking-widest mb-4">
+              Our Promise
+            </p>
+            <p className="font-display text-xl md:text-3xl text-white leading-snug">
+              "We see your child. We honor their journey. We commit to their
+              growth."
+            </p>
+            <p className="font-body text-white/60 mt-4 text-xs md:text-sm">
+              At House of Awesome, we are not just shaping skills we are
+              shaping futures.
+            </p>
+          </div>
         </div>
       </div>
     </section>
