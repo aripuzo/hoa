@@ -295,7 +295,7 @@ function HeroSection() {
           transform: "rotate(-12deg)",
         }}
       >
-        <img src="/hero_dance_group.jpg" alt="Kids dancing" />
+        <img src="/hero_dance_group.jpeg" alt="Kids dancing" />
       </div>
 
       {/* Right Photo Sticker */}
@@ -310,7 +310,7 @@ function HeroSection() {
           transform: "rotate(10deg)",
         }}
       >
-        <img src="/hero_gymnastics_trio.jpg" alt="Kids doing gymnastics" />
+        <img src="/hero_gymnastics_trio.jpeg" alt="Kids doing gymnastics" />
       </div>
 
       {/* Artistic Hub Sticker */}
@@ -450,10 +450,10 @@ function ProgramsSection() {
   }, []);
 
   const programs = [
-    { name: "Dance", image: "/programs_dance.jpg", rotate: -6 },
-    { name: "Gymnastics", image: "/programs_gymnastics.jpg", rotate: 6 },
-    { name: "Skateboarding", image: "/programs_skating.jpg", rotate: 4 },
-    { name: "Taekwondo", image: "/programs_taekwondo.jpg", rotate: -4 },
+    { name: "Dance", image: "/programs_dance.jpeg", rotate: -6 },
+    { name: "Gymnastics", image: "/programs_gymnastics.jpeg", rotate: 6 },
+    { name: "Skateboarding", image: "/programs_skating.jpeg", rotate: 4 },
+    { name: "Taekwondo", image: "/programs_taekwondo.jpeg", rotate: -4 },
   ];
 
   const scrollToSection = (id: string) => {
@@ -948,7 +948,7 @@ function PartySection() {
         }}
       >
         <img
-          src="/party_confetti.jpg"
+          src="/party_confetti.jpeg"
           alt="Celebration"
           className="w-full h-full object-cover"
         />
@@ -1148,7 +1148,7 @@ function ValuesSection() {
         <div className="flex flex-col lg:flex-row gap-8 items-center">
           <div className="values-photo photo-sticker blob-2 w-full lg:w-1/2 h-64 md:h-80">
             <img
-              src="/values_kid_smile.jpg"
+              src="/values_kid_smile.jpeg"
               alt="Happy child"
               className="w-full h-full object-cover"
             />
@@ -1631,7 +1631,7 @@ function ContactSection() {
           {/* Photo Column */}
           <div className="contact-photo photo-sticker blob-1 w-full lg:w-1/2 h-80 md:h-[500px] sticky top-24">
             <img
-              src="/contact_coach.jpg"
+              src="/contact_coach.jpeg"
               alt="Coach with child"
               className="w-full h-full object-cover"
             />
@@ -1819,7 +1819,7 @@ function App() {
           title="Move to the beat."
           label="Dance"
           description="Afro-Fusion and Contemporary dance that connects kids with expressive cultural movement while building body alignment, control and technique."
-          image="/spotlight_dance.jpg"
+          image="/spotlight_dance.jpeg"
           imagePosition="right"
           zIndex={30}
         />
@@ -1828,7 +1828,7 @@ function App() {
           title="Flip, balance, fly."
           label="Gymnastics"
           description="Safe skill progressions, body control and gradual development — children are encouraged to challenge themselves, have fun and build a strong physical foundation."
-          image="/spotlight_gymnastics.jpg"
+          image="/spotlight_gymnastics.jpeg"
           imagePosition="left"
           zIndex={40}
         />
@@ -1837,7 +1837,7 @@ function App() {
           title="Board with confidence."
           label="Skateboarding"
           description="Fun and engaging classes that build balance, coordination and confidence. We focus on safety, basic skills and gradual progression — helping kids overcome fear and express themselves."
-          image="/spotlight_skating.jpg"
+          image="/spotlight_skating.jpeg"
           imagePosition="right"
           zIndex={50}
         />
@@ -1846,7 +1846,7 @@ function App() {
           title="Discipline meets fun."
           label="Taekwondo"
           description="Beyond kicks and punches — structured training builds self-defence, mental agility, resilience and positive character both on and off the mat."
-          image="/spotlight_taekwondo.jpg"
+          image="/spotlight_taekwondo.jpeg"
           imagePosition="left"
           zIndex={60}
         />
