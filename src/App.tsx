@@ -468,11 +468,11 @@ function ProgramsSection() {
           ref={(el) => {
             cardsRef.current[i] = el;
           }}
-          className="absolute cursor-pointer group w-[40vw] md:w-[38vw] max-w-[500px]"
+          className="absolute cursor-pointer group w-[45vw] md:w-[38vw] max-w-[500px]"
           style={{
-            left: i % 2 === 0 ? "6vw" : "auto",
-            right: i % 2 === 1 ? "6vw" : "auto",
-            top: i < 2 ? "26vh" : "58vh",
+            left: i % 2 === 0 ? "3vw" : "auto",
+            right: i % 2 === 1 ? "3vw" : "auto",
+            top: i < 2 ? "25vh" : "60vh",
             transform: `rotate(${program.rotate}deg)`,
           }}
           onClick={() => scrollToSection(program.name.toLowerCase())}
@@ -481,10 +481,10 @@ function ProgramsSection() {
             <img
               src={program.image}
               alt={program.name}
-              className="w-full h-48 md:h-64 object-cover"
+              className="w-full h-60 md:h-64 object-cover"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-white border-t-4 border-ink py-3 px-4">
-              <span className="font-display text-xl md:text-2xl text-ink">
+            <div className="absolute bottom-0 left-0 right-0 bg-white border-t-2 md:border-t-4 border-ink py-1 md:py-3 px-2 md:px-4">
+              <span className="font-display text-sm md:text-2xl text-ink">
                 {program.name}
               </span>
             </div>
@@ -509,7 +509,6 @@ function ProgramsSection() {
   );
 }
 
-// Activity Spotlight Component
 function ActivitySpotlight({
   id,
   title,
@@ -1204,10 +1203,10 @@ function PricingSection() {
               TIMETABLE:
             </p>
             <p className="font-body text-sm text-white/60 max-w-2xl">
-              Gymnastics: 8AM - 10am
+              Gymnastics: am - 10am
             </p>
             <p className="font-body text-sm text-white/60 max-w-2xl">
-              Dance: 10AM - 12pm  
+              Dance: 10am - 12pm  
             </p>
             <p className="font-body text-sm text-white/60 max-w-2xl">
               Skateboarding: 11am - 12pm
@@ -1521,7 +1520,7 @@ function ContactSection() {
               <div className="flex items-center gap-4 text-ink/70">
                 <MapPin size={20} className="text-poppy" />
                 <span className="font-body">
-                  18 Adebayo Doherty Road, Lekki Phase 1, Lagos, Nigeria
+                  1B Adeyemi Lawson, Ikoyi, Lagos, Nigeria
                 </span>
               </div>
             </div>
@@ -1548,7 +1547,7 @@ function ContactSection() {
                   </svg>
                 </a>
                 <a
-                  href="https://facebook.com/Contemporary%20Dance%20Classes"
+                  href="https://www.facebook.com/share/1B45wcVvkB/?mibextid=wwXIfr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="icon-sticker w-10 h-10 hover:bg-poppy transition-colors"
